@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 import {
   CANCEL_TEXT,
@@ -6,12 +7,16 @@ import {
   FEED_MODIFY_TEXT,
 } from "../../data/constants";
 
-const Buttons = ({ EditPage }) => {
+const Buttons = ({ EditPage, postCategory }) => {
+  const navigate = useNavigate();
+
   return (
     <>
       <ButtonsSection>
-        <Button>{EditPage ? COMMENT_POST_BUTTON : FEED_MODIFY_TEXT}</Button>
-        <Button>{CANCEL_TEXT}</Button>
+        <Button onClick={() => postCategory()}>
+          {EditPage ? COMMENT_POST_BUTTON : FEED_MODIFY_TEXT}
+        </Button>
+        <Button onClick={() => navigate("/directory")}>{CANCEL_TEXT}</Button>
       </ButtonsSection>
     </>
   );

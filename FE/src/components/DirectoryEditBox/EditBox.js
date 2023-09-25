@@ -6,13 +6,18 @@ import {
 } from "../../data/constants";
 import Buttons from "./Buttons";
 
-const EditBox = () => {
+const EditBox = ({ EditPage, category, changeCategory, postCategory }) => {
   return (
     <>
       <Wrapper>
         <Label for="directoryName">{DIRECTORY_NAME_LABEL}</Label>
-        <Input id="directoryName" placeholder={DIRECTORY_NAME_HOLDER}></Input>
-        <Buttons />
+        <Input
+          id="directoryName"
+          value={category}
+          placeholder={DIRECTORY_NAME_HOLDER}
+          onChange={(event) => changeCategory(event.target.value)}
+        ></Input>
+        <Buttons EditPage={EditPage} postCategory={postCategory} />
       </Wrapper>
     </>
   );

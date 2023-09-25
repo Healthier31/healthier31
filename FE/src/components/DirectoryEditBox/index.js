@@ -3,12 +3,22 @@ import { styled } from "styled-components";
 import Title from "./Title";
 import EditBox from "./EditBox";
 
-const DirectoryEditBox = () => {
+const DirectoryEditBox = ({
+  EditPage,
+  category,
+  changeCategory,
+  postCategory,
+}) => {
   return (
     <>
       <EditSection>
-        <Title />
-        <EditBox />
+        <Title EditPage={EditPage} />
+        <EditBox
+          EditPage={EditPage}
+          category={category}
+          changeCategory={changeCategory}
+          postCategory={postCategory}
+        />
       </EditSection>
     </>
   );

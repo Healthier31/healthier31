@@ -1,12 +1,17 @@
 import { styled } from "styled-components";
 
-import { DIRECTORY_EDIT_TITLE_TEXT } from "../../data/constants";
+import {
+  DIRECTORY_EDIT_TITLE_TEXT,
+  DIRECTORY_MODIFY_TITLE_TEXT,
+} from "../../data/constants";
 
-const Title = () => {
+const Title = ({ EditPage }) => {
   return (
     <>
       <TitleSection>
-        <TitleText>{DIRECTORY_EDIT_TITLE_TEXT}</TitleText>
+        <TitleText>
+          {EditPage ? DIRECTORY_EDIT_TITLE_TEXT : DIRECTORY_MODIFY_TITLE_TEXT}
+        </TitleText>
       </TitleSection>
     </>
   );
