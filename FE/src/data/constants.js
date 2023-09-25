@@ -43,3 +43,6 @@ export const WARNING_TEXT = "정말로 삭제하시겠습니까?";
 export const SCRAP_TO_TODO_TEXT = "할일목록으로 가져오기";
 export const SCRAP_TO_DIRECTORY_TEXT = "디렉토리로 가져오기";
 export const PROJECT_TITLE = "Healthier";
+export const DIRECTORY_EDIT_TITLE_TEXT = "디렉토리 만들기";
+export const DIRECTORY_NAME_LABEL = "디렉토리명";
+export const DIRECTORY_NAME_HOLDER = "예시 : 끝장나게 숨쉬는 루틴";
