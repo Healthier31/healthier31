@@ -6,7 +6,7 @@ const DirectoryButton = () => {
 
   return (
     <ButtonFixed>
-      <Button onClick={() => navigate("/directory/Edit")}>+</Button>
+      <Button onClick={() => navigate("/directory/edit")}>+</Button>
     </ButtonFixed>
   );
 };
