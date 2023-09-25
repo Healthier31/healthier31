@@ -22,6 +22,7 @@ import DirectoryDetailPage from "./pages/DirectoryDetailPage";
 import GooglePage from "./pages/GooglePage";
 import ScrapTodoEditPage from "./pages/ScrapTodoEditPage";
 import DirectoryEditPage from "./pages/DirectoryEditPage";
+import DirectoryModifyPage from "./pages/DirectoryModifyPage";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,11 @@ const router = createBrowserRouter([
       { path: "/community/modify/:feedId", element: <CommunityModifyPage /> },
 
       { path: "/directory", element: <DirectoryPage /> },
-      { path: "/directory/Edit", element: <DirectoryEditPage /> },
+      { path: "/directory/edit", element: <DirectoryEditPage /> },
+      {
+        path: "/directory/modify/:categoryId",
+        element: <DirectoryModifyPage />,
+      },
       { path: "/directory/:categoryId", element: <DirectoryDetailPage /> },
 
       {
