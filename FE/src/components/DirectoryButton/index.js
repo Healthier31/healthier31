@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 const DirectoryButton = () => {
+  const navigate = useNavigate();
+
   return (
     <ButtonFixed>
-      <Button onClick={() => alert("개발중인 기능입니다.")}>+</Button>
+      <Button onClick={() => navigate("/directory/Edit")}>+</Button>
     </ButtonFixed>
   );
 };
