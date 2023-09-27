@@ -15,18 +15,18 @@ spring:
     multipart:
       max-file-size: 5MB # 업로드되는 단일 파일 최대 크기 5MB
       max-request-size: 5MB # 요청에 포함된 모든 파일 총 크기 5MB
-#  h2:
-#    console:
-#      enabled: true
-#      path: /h2
-#  datasource:
-#    url: jdbc:h2:mem:test
-
+  h2:
+    console:
+      enabled: true
+      path: /h2
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://RDS_URL:PORT/MySQL_Database_Name?useSSL=false&characterEncoding=UTF-8&serverTimeZone=Asia/Seoul
-    username: ${RDS_MySQL_USERNAME}
-    password: ${RDS_MySQL_PASSWORD}
+    url: jdbc:h2:mem:test
+
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://RDS_URL:PORT/MySQL_Database_Name?useSSL=false&characterEncoding=UTF-8&serverTimeZone=Asia/Seoul
+#    username: ${RDS_MySQL_USERNAME}
+#    password: ${RDS_MySQL_PASSWORD}
 
   jpa:
     hibernate:
@@ -63,8 +63,8 @@ server:
       force-response: true
 mail:
   address:
-    admin: ${ADMIN_EMAIL}
+    admin: admin #${ADMIN_EMAIL}
 jwt:
-  key: ${JWT_SECRET_KEY}
+  key: aaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbb #${JWT_SECRET_KEY}
   access-token-expiration-minutes: 600
   refresh-token-expiration-minutes: 1440
